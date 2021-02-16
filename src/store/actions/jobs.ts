@@ -6,6 +6,7 @@ export const fetchPositions = (text: string) => {
     try {
       dispatch({ type: Jobs.FETCH_POSITIONS })
       const res = await axios.get(`/positions.json?description=${text}`)
+      console.log(res.data)
       dispatch({ type: Jobs.FETCH_POSITIONS_SUCCESS, payload: res.data })
     } catch (e) {
       dispatch({

@@ -25,23 +25,23 @@ export enum Jobs {
   FETCH_POSITIONS_ERROR = 'FETCH_POSITIONS_ERROR'
 }
 
-interface IFetchPositions {
-  type: string
+export interface IFetchPositions {
+  type: Jobs.FETCH_POSITIONS
 }
 
-interface IFetchPositionsSuccess {
-  type: string
-  payload: CardTypes[]
+export interface IFetchPositionsSuccess {
+  type: Jobs.FETCH_POSITIONS_SUCCESS
+  payload: any[]
 }
 
-interface IFetchPositionsError {
-  type: string
-  error: string | null
+export interface IFetchPositionsError {
+  type: Jobs.FETCH_POSITIONS_ERROR
+  payload: string
 }
 
 export interface IJobsAction {
   type: string
-  payload: IFetchPositions | IFetchPositionsSuccess | IFetchPositionsError
+  payload?: IFetchPositions | IFetchPositionsSuccess | IFetchPositionsError
 }
 
 export interface AppState {
