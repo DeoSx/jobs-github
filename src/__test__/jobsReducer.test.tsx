@@ -1,5 +1,5 @@
 import jobsReducer from '../store/reducers/jobs'
-import { JobState, IJobsAction, Jobs, IFetchPositions } from '../types'
+import { JobState, IJobsAction, Jobs } from '../types'
 import { mock } from '../__mock__'
 
 describe('jobsReducer', () => {
